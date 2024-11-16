@@ -89,6 +89,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        off {
+            bindings = <&soft_off>;
+            key-positions = <45 44 30 31>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -139,10 +148,10 @@
 
         steno {
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T                &kp Y  &kp U  &kp I  &kp O  &kp P     &kp LBKT
-&none  &kp A  &kp S  &kp D  &kp F  &kp G                &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp APOS
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none     &none
-&none  &none  &none  &none  &kp C  &kp V  &none  &none  &kp N  &kp M  &none  &none  &none     &none
+&none  &kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y  &kp U  &kp I  &kp O  &kp P     &kp LBKT
+&none  &kp A  &kp S  &kp D  &kp F  &kp G                  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp APOS
+&none  &none  &none  &none  &none  &none  &trans  &trans  &none  &none  &none  &none  &none     &none
+&none  &none  &none  &none  &kp C  &kp V  &none   &none   &kp N  &kp M  &none  &none  &none     &none
             >;
         };
     };
