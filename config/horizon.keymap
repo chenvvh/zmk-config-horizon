@@ -21,11 +21,18 @@
 
 / {
     macros {
-        DTG: DTG {
+        lb2: DTG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI &kp LEFT_GUI>;
             label = "DTG";
+        };
+
+        lb1: gs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>;
+            label = "GS";
         };
     };
 
@@ -63,7 +70,7 @@
         LB: LB {
             compatible = "zmk,behavior-hold-tap";
             label = "LB";
-            bindings = <&kp>, <&DTG>;
+            bindings = <&lb2>, <&lb1>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
